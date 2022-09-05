@@ -1,0 +1,15 @@
+.my-app {
+  color: white;
+}
+
+.Search {
+  background-color: #e0e5e7;
+  width: 400px;
+  height: 500px;
+  opacity: 70%;
+}
+
+.Back {
+  position: fixed;
+  z-index: -1;
+}
