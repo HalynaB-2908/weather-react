@@ -3,8 +3,8 @@ import "./index.css";
 
 export default function Weather() {
     return (
-      <div className="Search rounded m-5">
-        <div className="row">
+      <div className="Search rounded border">
+        <div className="row p-3">
           <div className="col-9">
             <input type="search" className="form-control" placeholder="Type a city..."/>
           </div>

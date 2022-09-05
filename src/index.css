@@ -1,15 +1,22 @@
-.my-app {
-  color: white;
+.myApp {
+  color: rgb(167, 167, 167);
+  /* background-image: url("./img/daria-nepriakhina-04-WHQ_8iaQ-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
 }
 
 .Search {
-  background-color: #e0e5e7;
+  margin: 40px;
+  background-color: #fbfbfb;
   width: 400px;
-  height: 500px;
   opacity: 70%;
 }
 
-.Back {
-  position: fixed;
-  z-index: -1;
+.autor {
+  font-size: xx-small;
 }
