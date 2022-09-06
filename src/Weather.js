@@ -3,15 +3,22 @@ import "./index.css";
 import axios from "axios";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({ ready: false});
 
   function handleResponse(response) {
-    console.log(response.data);
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    console.log(response);
+    setWeatherData({
+      ready: true,
+      city: response.data.name,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      precipitation: response.data.main,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+    });
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div>
         <div className="Search rounded border ms-5 mt-5">
@@ -35,18 +42,20 @@ export default function Weather() {
           <div className="row">
             <div className="col-6">
               <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt=""
+                src={weatherData.iconUrl}
+                alt={weatherData.description}
                 className="w-50 ms-4 mt-3"
               />
-              <span className="fs-4">{Math.round(temperature)}°C</span>
+              <span className="fs-4">
+                {Math.round(weatherData.temperature)}°C
+              </span>
             </div>
             <div className="col-6">
-              <h1 className="mt-3">New York</h1>
+              <h1 className="mt-3">{weatherData.city}</h1>
               <p>
                 Tuesday 8:00
                 <br />
-                partly cloudy
+                <span className="text-capitalize">{weatherData.description}</span>
               </p>
             </div>
           </div>
@@ -58,11 +67,11 @@ export default function Weather() {
           </div>
           <div className="col-4">
             <h5>Humidity</h5>
-            <p>55%</p>
+            <p>{weatherData.humidity}%</p>
           </div>
           <div className="col-4">
             <h5>Wind</h5>
-            <p>15km/h</p>
+            <p>{Math.round(weatherData.wind)}km/h</p>
           </div>
         </div>
       </div>
