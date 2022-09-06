@@ -10,7 +10,7 @@ body {
 }
 
 .Search {
-  background-color: #e4f1fe;
+  background-color: #fff;
   color: #8f8787;
   width: 400px;
   border-color: #e4f1fe;
@@ -18,11 +18,11 @@ body {
 }
 
 .Values {
-  background-color: #e4f1fe;
+  background-color: #fff;
   color: #8f8787;
   border-color: #e4f1fe;
   width: 400px;
-  opacity: 85%;
+  opacity: 90%;
 }
 
 .autor {
