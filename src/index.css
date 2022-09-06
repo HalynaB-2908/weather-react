@@ -1,26 +1,40 @@
-.App {
-  color: rgb(114, 111, 111);
-  /* background-image: url("./img/daria-nepriakhina-04-WHQ_8iaQ-unsplash.jpg");
+body {
+  background-image: url("./img/daria-nepriakhina-04-WHQ_8iaQ-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .Search {
-  background-color: #fafafa;
+  background-color: #e4f1fe;
+  color: #8f8787;
   width: 400px;
-  opacity: 70%;
+  border-color: #e4f1fe;
+  opacity: 85%;
 }
 
 .Values {
   background-color: #e4f1fe;
+  color: #8f8787;
+  border-color: #e4f1fe;
   width: 400px;
+  opacity: 85%;
 }
 
 .autor {
   font-size: xx-small;
+  color: #ffe9e9;
+}
+
+.autor a {
+  text-decoration: none;
+  color: #ffe9e9;
+}
+
+.autor a:hover {
+  color: #fff;
 }
