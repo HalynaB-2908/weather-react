@@ -9,6 +9,12 @@ body {
   background-size: cover;
 }
 
+canvas {
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
 .Search {
   background-color: #fff;
   color: #8f8787;
