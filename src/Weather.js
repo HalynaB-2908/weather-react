@@ -3,6 +3,7 @@ import "./index.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherDetails from "./WeatherDetails";
+import { Oval } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -69,6 +70,21 @@ export default function Weather(props) {
     );
   } else {
     weatherSearch();
-    return "Loading...";
+    return (
+      <div className="m-5">
+        <Oval
+          height={200}
+          width={200}
+          color="#8f8787"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          ariaLabel="oval-loading"
+          secondaryColor="#fff"
+          strokeWidth={2}
+          strokeWidthSecondary={2}
+        />
+      </div>
+    );
   }
 }
