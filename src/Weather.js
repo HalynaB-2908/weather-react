@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
+import CurrentDate from "./CurrentDate.js"
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false});
 
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
-      city: response.data.name,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       temperature: response.data.main.temp,
+      city: response.data.name,
+      date: new Date(response.data.dt*1000),
       description: response.data.weather[0].description,
       precipitation: response.data.main,
       humidity: response.data.main.humidity,
@@ -34,7 +35,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary"
+                className="btn btn-secondary"
                 autoFocus="on"
               />
             </div>
@@ -53,7 +54,7 @@ export default function Weather(props) {
             <div className="col-6">
               <h1 className="mt-3">{weatherData.city}</h1>
               <p>
-                Tuesday 8:00
+                <CurrentDate  date={weatherData.date}/>
                 <br />
                 <span className="text-capitalize">{weatherData.description}</span>
               </p>
