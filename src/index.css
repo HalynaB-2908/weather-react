@@ -11,7 +11,7 @@ body {
 
 canvas {
   margin-right: 10px;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-top: 20px;
   display: inline-block;
 }
@@ -21,6 +21,19 @@ canvas {
   width: 400px;
   border-color: #e4f1fe;
   opacity: 85%;
+}
+
+.unit {
+  position: relative;
+  top: -16px;
+  font-size: 16px;
+}
+
+.unit a{
+text-decoration: none;
+}
+.unitDivider {
+  font-size: 14px;
 }
 
 .Values {
