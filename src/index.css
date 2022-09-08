@@ -9,7 +9,7 @@ body {
   background-size: cover;
 }
 
-canvas {
+.WeatherIcon canvas {
   margin-right: 10px;
   margin-left: 15px;
   margin-top: 20px;

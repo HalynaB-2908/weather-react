@@ -6,8 +6,8 @@ import WeatherTemperature from "./WeatherTemperature.js";
 export default function WeatherInfo(props) {
   return (
     <div className="row">
-      <div className="col-2">
-        <WeatherIcon code={props.data.icon} />
+      <div className="WeatherIcon col-2">
+        <WeatherIcon code={props.data.icon} size={52}/>
       </div>
       <div className="col-4 mt-3 fs-1">
         <WeatherTemperature celsius={props.data.temperature}/>

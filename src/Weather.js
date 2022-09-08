@@ -3,6 +3,7 @@ import "./index.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherDetails from "./WeatherDetails";
+import WeatherForecast from "./WeatherForecast.js"
 import { Oval } from "react-loader-spinner";
 
 export default function Weather(props) {
@@ -66,6 +67,7 @@ export default function Weather(props) {
           <WeatherInfo data={weatherData} />
         </div>
         <WeatherDetails data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
